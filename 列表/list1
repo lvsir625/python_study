@@ -1,0 +1,29 @@
+name_list=['金角大王','rain','eva','狗蛋','银角大王','eva','鸡头']
+
+
+# length = len(name_list)
+# i = 0
+# for i in range(length):
+#     if i %2 !=0:
+#         print(name_list[i])
+#         i+=1
+
+index=[]
+for k,v in  enumerate(name_list):
+    if v == 'eva':
+        index.append(k)
+print(index[1])
+
+name_list[index[1]]='EVA'
+print(name_list)
+
+# name_list.reverse()
+# print(name_list)
+
+
+
+
+
+
+
+

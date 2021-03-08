@@ -1,0 +1,54 @@
+# 按从左到右的顺序定义字符集和，下标从0开始顺序访问
+# 可以进行切边操作
+# 不可变，字符串是不可变的，不恩那个像列表一样修改其中某个元素，所有对字符串的修改操作其实都是相当于生成了一份新数据
+# 字符串的单引号和双引号都无法取消特殊字符的含义，如果想让引号内所有字符军取消特殊意思，可在引号前加r，如  r"ja\tck\n"
+a = 'alec jack'
+print(a.capitalize())   #将字符串的首字母改为大写
+print(a.casefold())    #将字符串的首字母改为小写
+print(a.center(50,'-'))   #将字符串按照第二个参数的符号补全长度为第一个参数
+print(a.count('a'))    #统计字符串中字符‘a’出现的次数
+
+print(a.find('j'))
+
+#endswith   以什么为结尾，startswith  以什么为开头
+b = 'today is a good day'
+if b.endswith('day'):
+    print('yeah')
+
+
+#字符串格式化的几种方式
+#方式一
+print("hello ，%s ,welcome to %s" %("lvsir","beijing"))
+#方式二
+str1 = "welcome {0} ,you are the {1} uer。 {0} good"
+print(str1.format("lvsir",1))
+#方式三
+str2 = "welcome {name} ,you are the {name_num} uer。 {name} good"
+print(str2.format(name="lvsir",name_num=1))
+
+#通过join可以将列表转换为字符串
+n = ["alec","jack","rose"]
+print("-".join(n))
+
+#转换大小写
+str3 = "AlecJacv"
+print(str3.lower())
+print(str3.upper())
+
+#去除字符串前后
+str4=" asdsadasd  "
+print(str4.strip())
+print(str4.rstrip())
+print(str4.lstrip())
+
+#字符串替换
+str5="my score is 580 ,is not good"
+print(str5.replace("580","630"))
+
+#以指定的分隔符切割，可以将字符串转换为列表
+str6 = "my score is 580 ,is not good"
+print(str6.split(" "))
+
+
+
+
